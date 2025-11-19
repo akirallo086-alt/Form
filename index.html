@@ -315,7 +315,7 @@
         let age = document.getElementById("age");
         let ageValue = parseInt(age.value);
         if (isNaN(ageValue) || age.value.length !== 2 || ageValue < 10 || ageValue > 99) {
-            alert("Age must be between 10 and 99, and a two-digit number.");
+            alert("Age must be higher and two digit.");
             age.classList.add("error");
             valid = false;
         }
@@ -326,7 +326,7 @@
         let ph2 = /^\+639\d{9}$/;
 
         if (!ph1.test(phone.value) && !ph2.test(phone.value)) {
-            alert("Invalid Philippine phone number.\nUse: 09XXXXXXXXX (11 digits) or +639XXXXXXXXX (12 digits)");
+            alert("Invalid Philippine phone number.\nUse: 09 (11 digits) or +639 (12 digits)");
             phone.classList.add("error");
             valid = false;
         }
